@@ -73,13 +73,7 @@ const Register = () => {
 
       <main className="flex w-full flex-col overflow-y-auto px-6 py-8 lg:w-1/2 lg:px-16">
         <div className="flex justify-end">
-          <a
-            href="#"
-            className="flex items-center gap-1.5 text-sm text-slate-500 transition hover:text-slate-700"
-          >
-            <Icon.arrowLeft className="h-4 w-4" />
-            Bosh sahifa
-          </a>
+        
         </div>
 
         <div className="mx-auto flex w-full max-w-md flex-1 flex-col justify-center py-8">
