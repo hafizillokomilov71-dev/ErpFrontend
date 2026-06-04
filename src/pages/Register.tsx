@@ -31,12 +31,7 @@ const Register = () => {
   return (
     <div className="flex min-h-screen bg-white">
       <aside className="relative hidden w-1/2 flex-col justify-between overflow-hidden bg-linear-to-br from-blue-600 via-indigo-600 to-purple-600 p-12 text-white lg:flex">
-        <div className="flex items-center gap-2">
-          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-white/20 backdrop-blur">
-            <Icon.logo className="h-5 w-5" />
-          </div>
-          <span className="text-lg font-semibold">ZorDoc Education</span>
-        </div>
+     
 
         <div className="max-w-md">
           <h1 className="text-4xl font-bold leading-tight">
