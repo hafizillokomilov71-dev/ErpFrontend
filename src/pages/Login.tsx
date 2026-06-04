@@ -17,18 +17,18 @@ const Login = () => {
 
         <div className="max-w-md">
           <h1 className="text-4xl font-bold leading-tight">
-            Bizning oilamizga qo'shiling.
+            Bilim — kelajakka eng yaxshi sarmoyadir.
           </h1>
           <p className="mt-4 text-sm leading-relaxed text-white/80">
-            Ro'yxatdan o'ting va bepul birinchi darsga taklif oling. 5000+
-            talaba bilan birga o'rging va karyera yo'lingizni boshlang.
+            5000+ bitiruvchi bizning oilamiz tarkibida. Endi navbat sizniki.
+            Bilim olishni davom ettiring va karyera maqsadlaringizga yeting.
           </p>
 
           <ul className="mt-8 space-y-3">
             {[
-              "Birinchi darslar bepul",
-              "35+ ta yo'nalish — o'zingiznikini tanlang",
-              "Ish ta'minoti — 100+ hamkor kompaniya",
+              "Onlayn platforma — istalgan vaqtda darslar",
+              "Mentor bilan to'g'ridan-to'g'ri aloqa",
+              "Davlat tomonidan tan olingan sertifikat",
             ].map((item) => (
               <li key={item} className="flex items-center gap-3 text-sm">
                 <span className="flex h-5 w-5 items-center justify-center rounded-full bg-white/20">
@@ -61,42 +61,13 @@ const Login = () => {
 
         <div className="mx-auto flex w-full max-w-md flex-1 flex-col justify-center py-8">
           <h2 className="text-2xl font-bold text-slate-900">
-            Yangi hisob yarating
+            Hisobingizga kiring
           </h2>
           <p className="mt-1.5 text-sm text-slate-500">
-            Ma'lumotlaringizni kiriting va bepul ro'yxatdan o'ting.
+            Ma'lumotlaringizni kiriting va o'quv jarayonini davom ettiring.
           </p>
 
           <form className="mt-7 space-y-4">
-            <div className="grid grid-cols-2 gap-4">
-              <div className="flex flex-col gap-1.5">
-                <label className="text-sm font-medium text-slate-700">
-                  Ism <span className="text-red-500">*</span>
-                </label>
-                <Input
-                  type="text"
-                  form={form}
-                  name="firstname"
-                  id="1"
-                  placeholder="Aziz"
-                  className="w-full rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 transition outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
-                />
-              </div>
-              <div className="flex flex-col gap-1.5">
-                <label className="text-sm font-medium text-slate-700">
-                  Familiya <span className="text-red-500">*</span>
-                </label>
-                <Input
-                  type="text"
-                  form={form}
-                  name="lastname"
-                  id="2"
-                  placeholder="Komilov"
-                  className="w-full rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 transition outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
-                />
-              </div>
-            </div>
-
             <div className="flex flex-col gap-1.5">
               <label className="text-sm font-medium text-slate-700">
                 Email <span className="text-red-500">*</span>
@@ -108,21 +79,6 @@ const Login = () => {
                 leftIcon={<Icon.mail />}
                 id="3"
                 placeholder="Aziz@gmail.com"
-                className="w-full rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 transition outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
-              />
-            </div>
-
-            <div className="flex flex-col gap-1.5">
-              <label className="text-sm font-medium text-slate-700">
-                Phone <span className="text-red-500">*</span>
-              </label>
-              <Input
-                type="phone"
-                form={form}
-                name="phone"
-                leftIcon={<Icon.phone />}
-                id="4"
-                placeholder="+998"
                 className="w-full rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 transition outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
               />
             </div>
@@ -143,50 +99,19 @@ const Login = () => {
               />
             </div>
 
-            <div className="flex flex-col gap-1.5">
-              <label className="text-sm font-medium text-slate-700">
-                Parolni tasdiqlang <span className="text-red-500">*</span>
-              </label>
-              <Input
-                type="password"
-                form={form}
-                name="confirm-password"
-                leftIcon={<Icon.password />}
-                rightIcon={<Icon.eye />}
-                id="6"
-                placeholder="Parolni qaytadan kiriting"
-                className="w-full rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 transition outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
-              />
-            </div>
-
             <label className="flex items-center gap-2 text-sm text-slate-600">
               <input
                 type="checkbox"
                 className="h-4 w-4 rounded border-slate-300 text-blue-600 focus:ring-blue-500"
               />
-              <span>
-                <a
-                  href="#"
-                  className="font-medium text-blue-600 hover:underline"
-                >
-                  Foydalanish shartlari
-                </a>{" "}
-                va{" "}
-                <a
-                  href="#"
-                  className="font-medium text-blue-600 hover:underline"
-                >
-                  Maxfiylik siyosati
-                </a>
-                ga roziman
-              </span>
+              Meni eslab qol
             </label>
 
             <Button
               className="flex cursor-pointer w-full items-center justify-center gap-2 rounded-xl bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-600/25 transition hover:bg-blue-700 active:scale-[0.98]"
               rightIcon={<Icon.arrowRight className="h-4 w-4" />}
             >
-              Ro'yxatdan o'tish
+              Kirish
             </Button>
 
             <div className="flex items-center gap-3 py-1">
@@ -196,27 +121,29 @@ const Login = () => {
             </div>
 
             <div className="grid grid-cols-2 gap-4">
-              <button
-                type="button"
-                className="flex items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-slate-700 transition hover:bg-slate-50"
+              <Button
+                className={
+                  "flex items-center cursor-pointer justify-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-slate-700! transition hover:bg-slate-50"
+                }
+                leftIcon={<Icon.google className="h-4 w-4" />}
               >
-                <Icon.google className="h-4 w-4" />
                 Google
-              </button>
-              <button
-                type="button"
-                className="flex items-center justify-center gap-2 rounded-xl bg-slate-900 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-slate-800"
+              </Button>
+              <Button
+                className={
+                  "flex items-center text-white! bg-black! cursor-pointer justify-center gap-2 rounded-xl border border-slate-200 px-4 py-2.5 text-sm font-semibold  transition hover:bg-slate-50"
+                }
+                leftIcon={<Icon.apple className="h-4 w-4" />}
               >
-                <Icon.apple className="h-4 w-4" />
                 Apple
-              </button>
+              </Button>
             </div>
           </form>
 
           <p className="mt-6 text-center text-sm text-slate-500">
-            Hisobingiz bormi?{" "}
+            Hisobingiz yo'qmi?{" "}
             <a href="#" className="font-semibold text-blue-600 hover:underline">
-              Kirish
+              Ro'yxatdan o'ting
             </a>
           </p>
         </div>
