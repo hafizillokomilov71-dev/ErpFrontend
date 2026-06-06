@@ -1,4 +1,4 @@
-import type { ICategory, ICourseCard } from "../../types/couses.type";
+import type { ICategory, ICourseCard } from "../types/couses.type";
 
 export const categories: ICategory[] = [
   { label: "Frontend", count: 8 },

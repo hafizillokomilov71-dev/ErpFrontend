@@ -1,5 +1,5 @@
 import Button from "../ui/Button";
-import { categories, durations, levels } from "../data/courses.data";
+import { categories, durations, levels } from "../../data/courses.data";
 
 interface FilterTitleProps {
   children: string;
