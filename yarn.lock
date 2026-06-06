@@ -574,6 +574,16 @@ ajv@^6.14.0:
     json-schema-traverse "^0.4.1"
     uri-js "^4.2.2"
 
+async@0.1.15:
+  version "0.1.15"
+  resolved "https://registry.npmjs.org/async/-/async-0.1.15.tgz"
+  integrity sha512-AGVE6WcRsWX4QudgrVhdDUKAgCv67EwmzP3yEny/AI7/WqM+J8CStwMbGqeXC9p8ih4qota04EaMim/WvA8OCw==
+
+async@0.1.x:
+  version "0.1.22"
+  resolved "https://registry.npmjs.org/async/-/async-0.1.22.tgz"
+  integrity sha512-2tEzliJmf5fHNafNwQLJXUasGzQCVctvsNkXmnlELHwypU0p08/rHohYvkqKIjyXpx+0rkrYv6QbhJ+UF4QkBg==
+
 asynckit@^0.4.0:
   version "0.4.0"
   resolved "https://registry.npmjs.org/asynckit/-/asynckit-0.4.0.tgz"
@@ -672,6 +682,11 @@ csstype@^3.2.2:
   version "3.2.3"
   resolved "https://registry.npmjs.org/csstype/-/csstype-3.2.3.tgz"
   integrity sha512-z1HGKcYy2xA8AGQfwrn0PAy+PB7X/GSj3UVJW9qKyn43xWa+gl5nXmU4qqLMRzWVLFC8KusUX8T/0kCiOYpAIQ==
+
+ctxobj@0.2.x:
+  version "0.2.1"
+  resolved "https://registry.npmjs.org/ctxobj/-/ctxobj-0.2.1.tgz"
+  integrity sha512-yIL7DlQ6D3zV1ZKSyaDgCo3X1mpVv0sTHr7obMyaqB66OPGBAhlx4ZaSCcIU4FgdjMOnXYPPhNhuON6RLzR3kw==
 
 debug@^4.1.0, debug@^4.3.1, debug@^4.3.2, debug@^4.4.3, debug@4:
   version "4.4.3"
@@ -922,6 +937,11 @@ form-data@^4.0.5:
     es-set-tostringtag "^2.1.0"
     hasown "^2.0.2"
     mime-types "^2.1.12"
+
+fsmjs@0.2.x:
+  version "0.2.1"
+  resolved "https://registry.npmjs.org/fsmjs/-/fsmjs-0.2.1.tgz"
+  integrity sha512-oEEmd6psgMuw3gpue2rlf39IT0Nc9wmK1WMyqVFJG+pYwQ78fGU4Jwk4+wgQ1W/YWC5ReW8qTHMxZyTc2iFDvg==
 
 function-bind@^1.1.2:
   version "1.1.2"
@@ -1189,6 +1209,11 @@ node-releases@^2.0.36:
   resolved "https://registry.npmjs.org/node-releases/-/node-releases-2.0.45.tgz"
   integrity sha512-iIbHXV9eBB2nB0wa7oTsrrXq+qQt+9SIlx9AX3T96YgobtEQfis5n6TJ6vV+3QP8DwdriEAcGhARaFCu37peBg==
 
+node-uuid@1.3.3:
+  version "1.3.3"
+  resolved "https://registry.npmjs.org/node-uuid/-/node-uuid-1.3.3.tgz"
+  integrity sha512-xKQtL5imfvX6PvUmgJyU/XaNT/l8tKvs+sJ6KLOmIzk/H8+sm7uE80QlPmmu3l1uirvRL3kZqtJPWoQBWT9gQw==
+
 optionator@^0.9.3:
   version "0.9.4"
   resolved "https://registry.npmjs.org/optionator/-/optionator-0.9.4.tgz"
@@ -1234,6 +1259,13 @@ picocolors@^1.1.1:
   version "4.0.4"
   resolved "https://registry.npmjs.org/picomatch/-/picomatch-4.0.4.tgz"
   integrity sha512-QP88BAKvMam/3NxH6vj2o21R6MjxZUAd6nlwAS/pnGvN9IVLocLHxGYIzFhg6fUQ+5th6P4dv4eW9jX3DSIj7A==
+
+portscanner@0.1.x:
+  version "0.1.3"
+  resolved "https://registry.npmjs.org/portscanner/-/portscanner-0.1.3.tgz"
+  integrity sha512-q2HhsfT8S5TwFYcE4iOBgdcXxtZ23cheSMe8A+OCN4/TXKmk7cqx4Mu4qNpmhdEGBRau0BD46dwi7N7Ok238uA==
+  dependencies:
+    async "0.1.15"
 
 postcss@^8.5.14:
   version "8.5.15"
@@ -1382,6 +1414,17 @@ source-map-js@^1.2.1:
   version "1.2.1"
   resolved "https://registry.npmjs.org/source-map-js/-/source-map-js-1.2.1.tgz"
   integrity sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA==
+
+spinner@^0.3.4:
+  version "0.3.4"
+  resolved "https://registry.npmjs.org/spinner/-/spinner-0.3.4.tgz"
+  integrity sha512-Zows0JkJsy5nZvysoKIghnELRvijuyaEo4jV39tDBsADwntEFyHjSm6y0XXst22XXraa5K7HpzitQezicSJuBQ==
+  dependencies:
+    async "0.1.x"
+    ctxobj "0.2.x"
+    fsmjs "0.2.x"
+    node-uuid "1.3.3"
+    portscanner "0.1.x"
 
 tailwindcss@^4.3.0, tailwindcss@4.3.0:
   version "4.3.0"

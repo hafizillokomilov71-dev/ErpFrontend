@@ -2,9 +2,25 @@ import { useForm } from "react-hook-form";
 import Icon from "../components/ui/Icon";
 import Input from "../components/ui/Input";
 import Button from "../components/ui/Button";
+import useLogin from "../hooks/api/useLogin";
+import { useEffect } from "react";
+import { toast } from "react-toastify";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   const form = useForm();
+  const { isSuccess, data, isPending, mutateAsync } = useLogin();
+  const onSubmit = (data: any) => {
+    mutateAsync(data);
+  };
+  useEffect(() => {
+    if (isSuccess) {
+      toast.success("Ro'yxatdan o'tish muvaffaqiyatli amalga oshirildi");
+      const token = data?.data.data.tokens.accessToken;
+      localStorage.setItem("token", token);
+      window.location.href = "/";
+    }
+  }, [isSuccess]);
   return (
     <div className="flex min-h-screen bg-white">
       <aside className="relative hidden w-1/2 flex-col justify-between overflow-hidden bg-linear-to-br from-blue-600 via-indigo-600 to-purple-600 p-12 text-white lg:flex">
@@ -67,7 +83,10 @@ const Login = () => {
             Ma'lumotlaringizni kiriting va o'quv jarayonini davom ettiring.
           </p>
 
-          <form className="mt-7 space-y-4">
+          <form
+            onSubmit={form.handleSubmit(onSubmit)}
+            className="mt-7 space-y-4"
+          >
             <div className="flex flex-col gap-1.5">
               <label className="text-sm font-medium text-slate-700">
                 Email <span className="text-red-500">*</span>
@@ -75,7 +94,7 @@ const Login = () => {
               <Input
                 type="email"
                 form={form}
-                name="email"
+                name="identifier"
                 leftIcon={<Icon.mail />}
                 id="3"
                 placeholder="Aziz@gmail.com"
@@ -108,10 +127,12 @@ const Login = () => {
             </label>
 
             <Button
+              type="submit"
+              loading={isPending}
               className="flex cursor-pointer w-full items-center justify-center gap-2 rounded-xl bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-600/25 transition hover:bg-blue-700 active:scale-[0.98]"
               rightIcon={<Icon.arrowRight className="h-4 w-4" />}
             >
-              Kirish
+              {isPending ? "Yuklanmoqda..." : "Kirish"}
             </Button>
 
             <div className="flex items-center gap-3 py-1">
@@ -142,9 +163,12 @@ const Login = () => {
 
           <p className="mt-6 text-center text-sm text-slate-500">
             Hisobingiz yo'qmi?{" "}
-            <a href="#" className="font-semibold text-blue-600 hover:underline">
+            <Link
+              to="/register"
+              className="font-semibold text-blue-600 hover:underline"
+            >
               Ro'yxatdan o'ting
-            </a>
+            </Link>
           </p>
         </div>
       </main>

@@ -1,0 +1,11 @@
+export { default as Header } from "./Header";
+export { default as Hero } from "./Hero";
+export { default as Stats } from "./Stats";
+export { default as PopularCourses } from "./PopularCourses";
+export { default as Features } from "./Features";
+export { default as Teachers } from "./Teachers";
+export { default as Testimonials } from "./Testimonial";
+export { default as Faq } from "./Faq";
+export { default as Cta } from "./Cta";
+export { default as Footer } from "./Footer";
+export { default as SectionHeading } from "./SectionHeading";

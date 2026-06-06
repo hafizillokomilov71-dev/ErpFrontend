@@ -18,6 +18,7 @@ import {
   BlogDetail,
   NotFound,
 } from "../pages";
+import ProtectedRoute from "./protected.route.tsx";
 
 const router = createBrowserRouter([
   {
@@ -79,11 +80,19 @@ const router = createBrowserRouter([
   },
   {
     path: "/login",
-    element: <Login />,
+    element: (
+      <ProtectedRoute>
+        <Login />,
+      </ProtectedRoute>
+    ),
   },
   {
     path: "/register",
-    element: <Register />,
+    element: (
+      <ProtectedRoute>
+        <Register />,
+      </ProtectedRoute>
+    ),
   },
   {
     path: "*",

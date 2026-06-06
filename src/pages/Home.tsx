@@ -1,14 +1,25 @@
+import {
+  Hero,
+  PopularCourses,
+  Features,
+  Teachers,
+  Testimonials,
+  Faq,
+  Cta,
+} from "../components/home";
+
 const Home = () => {
   return (
-    <>
-      <section className="hero">
-        <h1>Home</h1>
-      </section>
-      <section className="features"></section>
-      <section className="popular-courses"></section>
-      <section className="testimonials"></section>
-      <section className="cta"></section>
-    </>
+    <div className="min-h-screen bg-white font-sans text-slate-900">
+      <Hero />
+      <PopularCourses />
+      <Features />
+      <Teachers />
+      <Testimonials />
+      <Faq />
+      <Cta />
+    </div>
   );
 };
+
 export default Home;
