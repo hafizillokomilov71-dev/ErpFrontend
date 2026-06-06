@@ -6,9 +6,9 @@ interface Props {
 
 const RootLayout = ({}: Props) => {
   return (
-    <div>
+    <>
       <Outlet />
-    </div>
+    </>
   );
 };
 export default RootLayout;
